@@ -1,0 +1,2 @@
+docker build -t killertiger/hello-go .   
+docker push killertiger/hello-go
