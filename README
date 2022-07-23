@@ -1,0 +1,10 @@
+Any modifications:
+docker build -t killertiger/hello-go:vX.Y .
+docker push killertiger/hello-go:vX.Y
+
+Change deployment.yaml with the new version
+kubectl apply -f k8s/deployment.yaml 
+
+Port forward:
+kubectl get services 
+kubectl port-forward svc/goserver-service 9000:9000

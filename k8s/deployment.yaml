@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: "goserver"
-          image: "killertiger/hello-go:v5.2"
+          image: "killertiger/hello-go:v5.4"
           envFrom:
             - configMapRef:
                 name: goserver-env
