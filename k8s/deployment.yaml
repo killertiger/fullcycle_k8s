@@ -17,13 +17,21 @@ spec:
       containers:
         - name: "goserver"
           image: "killertiger/hello-go:v5.6"
+
+          startupProbe:
+            httpGet:
+              path: /healthz
+              port: 8080
+            periodSeconds: 3
+            failureThreshold: 30
+
           readinessProbe:
             httpGet:
               path: /healthz
               port: 8080
             periodSeconds: 3
             failureThreshold: 1
-            initialDelaySeconds: 10
+            # initialDelaySeconds: 10
 
           livenessProbe:
             httpGet:
