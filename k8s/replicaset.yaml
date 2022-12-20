@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
-  name: gpserver
+  name: goserver
   labels:
     app: goserver
 spec:
@@ -16,4 +16,4 @@ spec:
     spec:
       containers:
         - name: "goserver"
-          image: "killertiger/hello-go:v2"
+          image: "killertiger/hello-go:v5.8"

@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: "goserver"
-          image: "killertiger/hello-go:v5.6"
+          image: "killertiger/hello-go:v5.8"
 
           resources:
             requests:
